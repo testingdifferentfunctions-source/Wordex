@@ -1,0 +1,5 @@
+peewee~=4.2.3
+aiogram~=3.22.0
+python-dotenv~=1.2.2
+fastapi~=0.128.8
+uvicorn
