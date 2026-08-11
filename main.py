@@ -7,7 +7,7 @@ from aiogram.filters import Command
 from aiogram.enums import ParseMode
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
-
+# comment
 from peewee import *
 import random
 import os
