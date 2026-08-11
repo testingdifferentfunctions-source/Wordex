@@ -1,6 +1,6 @@
 from peewee import *
 
-db = SqliteDatabase("database.db")
+db = SqliteDatabase("api/database.db")
 
 
 class EnglishAnimalsWords(Model):
