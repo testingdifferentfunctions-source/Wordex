@@ -710,7 +710,7 @@ async def about_option(callback: CallbackQuery):
                                        parse_mode=ParseMode.HTML, reply_markup=menu_keyboard)
 
 
-@app.post("webhook")
+@app.post("/api/webhook")
 async def webhook(request: Request):
     update_data = await request.json()
     update = types.Update(**update_data)
