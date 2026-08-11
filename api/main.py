@@ -12,7 +12,7 @@ from peewee import *
 import random
 import os
 from fastapi import FastAPI, Request
-from db import (GreekMonthsWords, GreekNationalitiesWords, GreekOppositesWords,
+from api.db import (GreekMonthsWords, GreekNationalitiesWords, GreekOppositesWords,
                 GreekGreetingsWords, GreekPronounsWords, GreekColorsWords, EnglishAnimalsWords)
 
 
