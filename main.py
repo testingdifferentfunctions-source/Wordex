@@ -667,6 +667,10 @@ async def get_answer(callback: CallbackQuery, callback_data: TestCallback, state
                                 words=[], selected_answers=[], right_answers=[])
 
     else:
+        if preferred_language == "english":
+            if preferred_section == "english_section_1":
+                await english_animals_creation(callback, state)
+      
         if preferred_language == "greek":
             if preferred_section == "greek_section_1":
                 await greek_greetings_creation(callback, state)
