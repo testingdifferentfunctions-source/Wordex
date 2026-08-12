@@ -86,8 +86,8 @@ async def home_menu(callback: CallbackQuery):
                                                                                 callback_data="about")],
                                                           ])
 
-    await callback.message.answer("<blockquote>Вітаємо у Wordex!</blockquote>\n"
-                                      "<b>Wordex</b> - це бот, що призначений для вивчення слів різних мов світу.\n"
+    await callback.message.answer("<blockquote>Вітаємо у Wordlore Wizard!</blockquote>\n"
+                                      "<b>Wordlore Wizard</b> - це бот, що призначений для вивчення слів різних мов світу.\n"
                                       "\n"
                                       "Щоб продовжити далі оберіть мову для вивчення",
                                       parse_mode=ParseMode.HTML, reply_markup=menu_keyboard)
@@ -696,7 +696,7 @@ async def about_option(callback: CallbackQuery):
                                                           ])
 
     await callback.message.answer("<blockquote>Про проєкт</blockquote>\n"
-                                       "<b>Wordex</b> - це бот, що призначений для вивчення слів різних мов світу.\n"
+                                       "<b>Wordlore Wizard</b> - це бот, що призначений для вивчення слів різних мов світу.\n"
                                        "\n"
                                        "<blockquote>Про розробника проєкту.</blockquote>\n"
                                        "Крім розробки різноманітних програм, сайтів та онлайн-платформ, "
@@ -711,6 +711,9 @@ async def about_option(callback: CallbackQuery):
 
 
 @app.post("/api/webhook")
+@app.post("/api/main.py")
+@app.post("/")
+@app.post("/{full_path:path}")
 async def webhook(request: Request):
     update_data = await request.json()
     update = types.Update(**update_data)
